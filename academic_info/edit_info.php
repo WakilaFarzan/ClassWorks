@@ -15,14 +15,20 @@ $row = mysqli_fetch_assoc($result);
 
 
 ?>
-
+<h4 align="center"  style="color:darkturquoise">Edit Academic Information</h4>
+<hr>
 
 <form action="update_info.php" method="post">
 
     <input type="hidden" name="id" value="<?php echo $row['id'];?>" />
 
     <label>Level of Education</label>
-    <input type="text" name="lvl_of_edu" value="<?php echo $row['lvl_of_edu'];?>" /></br>
+    <select name="lvl_of_edu">
+                    <option <?php if($row['lvl_of_edu']=='Diploma') echo 'selected'?> value="Diploma">Diploma</option>
+                    <option <?php if($row['lvl_of_edu']=='Bachelor/Honors') echo 'selected'?>  value="Bachelor/Honors">Bachelor/Honors</option>
+                    <option <?php if($row['lvl_of_edu']=='Masters') echo 'selected'?>  value="Masters">Masters</option>
+                    <option <?php if($row['lvl_of_edu']=='Doctoral') echo 'selected'?>  value="Doctoral">Doctoral</option>
+    </select></br>
 
     <label>Degree Name</label><span style="color:red">*</span>
     <input type="text" name="degree" value="<?php echo $row['degree'];?>" /></br>
@@ -31,7 +37,13 @@ $row = mysqli_fetch_assoc($result);
     <input type="text" name="group" value="<?php echo $row['group'];?>"/></br>
 
     <label>Institute</label><span style="color:red">*</span>
-    <input type="text" name="institute" value="<?php echo $row['institute'];?>"/></br>
+    <select name="institute">
+        <option value="">---Select---</option>
+        <option <?php if($row['institute']=='NSTU') echo 'selected'?> value="NSTU">Noakhali Science & Technology University</option>
+        <option <?php if($row['institute']=='BUET') echo 'selected'?> value="BUET">Bangaladesh University of Engineering & Technology</option>
+        <option  <?php if($row['institute']=='DU') echo 'selected'?> value="DU">Dhaka University</option>
+        <option  <?php if($row['institute']=='CU') echo 'selected'?> value="CU">Chittagong University</option>
+    </select></br>
 
     <label>Result</label><span style="color:red">*</span>
     <input type="text" name="result" value="<?php echo $row['result'];?>"/></br>
@@ -43,12 +55,12 @@ $row = mysqli_fetch_assoc($result);
     <input type="text" name="duration" value="<?php echo $row['duration'];?>"/></br>
 
     <label>Achievement</label>
-    <textarea rows="3" cols="50" name="achievement" value="<?php echo $row['achievement'];?>"></textarea></br>
+    <textarea rows="3" cols="50" name="achievement"><?php echo $row['achievement'];?></textarea></br>
 
     <label>Completion Status</label>
     <select name="complete_status">
-        <option value="Completed">Completed</option>
-        <option value="Not Completed">Not Completed</option>
+        <option <?php if($row['complete_status']=='Completed') echo 'selected'?> value="Completed">Completed</option>
+        <option <?php if($row['complete_status']=='Not Completed') echo 'selected'?> value="Not Completed">Not Completed</option>
     </select></br>
     </br>
 

@@ -1,9 +1,16 @@
-<h4>Academic Information</h4>
+<h4 align="center"  style="color:darkturquoise">Academic Information</h4>
 <hr>
 <form action="add_info.php" method="post">
 
     <label>Level of Education</label>
-    <input type="text" name="lvl_of_edu" /></br>
+    <select name="lvl_of_edu">
+                <option value="">---Select---</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Bachelor/Honors">Bachelor/Honors</option>
+                <option value="Masters">Masters</option>
+                <option value="Doctoral">Doctoral</option>
+    </select></br>
+
 
     <label>Degree Name</label><span style="color:red">*</span>
     <input type="text" name="degree" /></br>
@@ -12,7 +19,13 @@
     <input type="text" name="group" /></br>
 
     <label>Institute</label><span style="color:red">*</span>
-    <input type="text" name="institute" /></br>
+    <select name="institute">
+        <option value="">---Select---</option>
+        <option value="NSTU">Noakhali Science & Technology University</option>
+        <option value="BUET">Bangaladesh University of Engineering & Technology</option>
+        <option value="DU">Dhaka University</option>
+        <option value="CU">Chittagong University</option>
+    </select></br>
 
     <label>Result</label><span style="color:red">*</span>
     <input type="text" name="result" /></br>
@@ -28,6 +41,7 @@
 
     <label>Completion Status</label>
     <select name="complete_status">
+        <option value="">---Select---</option>
         <option value="Completed">Completed</option>
         <option value="Not Completed">Not Completed</option>
     </select></br>
@@ -36,3 +50,5 @@
     <button type="submit" align="right">Submit</button>
 
 </form>
+
+<a href="list_info.php">Go to List</a>

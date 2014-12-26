@@ -53,3 +53,5 @@ $result = mysqli_query($link, $query);
 
 
 </table>
+</br>
+<a href="create_info.html">Add New</a>
