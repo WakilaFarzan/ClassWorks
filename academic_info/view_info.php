@@ -7,7 +7,7 @@ $link = mysqli_connect("localhost",
     "lict@2",
     "ftfl");
 
-$query = "select * from profile WHERE id = $id";
+$query = "select * from academicinfo WHERE id = $id";
 
 $result = mysqli_query($link, $query);
 
@@ -16,4 +16,4 @@ $row = mysqli_fetch_assoc($result);
 print_r($row);
 ?>
 
-<a href="list.php">Go to Home</a>
+<a href="list_info.php">Go to Home</a>

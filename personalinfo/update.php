@@ -5,7 +5,7 @@ $id = $_POST['id'];
 
 $link = mysqli_connect("localhost",
     "root",
-    "allah@03",
+    "lict@2",
     "ftfl");
 
 $query = "UPDATE `ftfl`.`profile` SET `name`='".$_POST['name']."',`father`='".$_POST['father']."',
@@ -19,3 +19,4 @@ $query = "UPDATE `ftfl`.`profile` SET `name`='".$_POST['name']."',`father`='".$_
 mysqli_query($link, $query);
 
 header('location:list.php');
+

@@ -2,7 +2,7 @@
 
 $link = mysqli_connect("localhost",
     "root",
-    "allah@03",
+    "lict@2",
     "ftfl");
 
 $query = "select * from profile;";
@@ -70,7 +70,7 @@ $result = mysqli_query($link, $query);
             <td><?php echo $row['current_location']?></td>
             <td><?php echo $row['present_address']?></td>
             <td><?php echo $row['parmanent_address']?></td>
-            <td> <a href="view.php?id=<?php echo $row['id']?>">View</a> |<a href="edit.php?id=<?php echo $row['id']?>">Edit</a> | <a href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
+            <td> <a href="view1.php?id=<?php echo $row['id']?>">View</a> |<a href="edit.php?id=<?php echo $row['id']?>">Edit</a> | <a href="delete.php?id=<?php echo $row['id']?>">Delete</a></td>
         </tr>
 
     <?php

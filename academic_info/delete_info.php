@@ -7,8 +7,8 @@ $link = mysqli_connect("localhost",
     "lict@2",
     "ftfl");
 
-$query = "DELETE FROM `ftfl`.`profile` WHERE `profile`.`id` = $id";
+$query = "DELETE FROM `ftfl`.`academicinfo` WHERE `academicinfo`.`id` = $id";
 
 mysqli_query($link, $query);
 
-header('location:list.php');
+header('location:list_info.php');
