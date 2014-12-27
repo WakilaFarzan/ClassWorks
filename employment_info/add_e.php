@@ -1,7 +1,7 @@
 <?php
 $link = mysqli_connect("localhost",
                         "root",
-                        "lict@2",
+                        "allah@03",
                         "ftfl");
 
 $query="INSERT INTO `ftfl`.`employmentinfo` (
@@ -11,6 +11,7 @@ $query="INSERT INTO `ftfl`.`employmentinfo` (
                                             `designation` ,
                                             `department` ,
                                             `from` ,
+                                            `radio` ,
                                             `to` ,
                                             `duration` ,
                                             `responsibility`
@@ -18,7 +19,7 @@ $query="INSERT INTO `ftfl`.`employmentinfo` (
 VALUES (
             '".$_POST['company_name']."',  '".$_POST['company_business']."',
             '".$_POST['address']."',  '".$_POST['designation']."',
-            '".$_POST['department']."',  '".$_POST['from']."',  '".$_POST['to']."',
+            '".$_POST['department']."',  '".$_POST['from']."', '".$_POST['radio']."',  '".$_POST['to']."',
             '".$_POST['duration']."',  '".$_POST['responsibility']."'
 );";
 

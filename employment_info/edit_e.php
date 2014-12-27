@@ -4,7 +4,7 @@ $id = $_GET['id'];
 
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
+    "allah@03",
     "ftfl");
 
 $query = "select * from employmentinfo WHERE id = $id";
@@ -41,8 +41,8 @@ $row = mysqli_fetch_assoc($result);
     <input type="date" name="from" value="<?php echo $row['from']?>"/></br>
 
     <label>To</label>
-    <!--<input type="radio" name="to"value="Present" checked>Present
-    <input type="radio" name="to">--><input type="date" name="to" value="<?php echo $row['to']?>"> </br>
+    <input type="radio" name="radio" <?php if(!empty($row['radio'])) echo 'checked' ?> value="Present" checked>Present
+    <input type="radio" name="radio" <?php if(!empty($row['radio'])) echo 'checked' ?>><input type="date" name="to" value="<?php echo $row['to']?>"> </br>
 
     <label>Employment Duration</label>
     <input type="text" name="duration" value="<?php echo $row['duration']?>"/></br>

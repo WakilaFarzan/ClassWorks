@@ -2,7 +2,7 @@
 
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
+    "allah@03",
     "ftfl");
 
 $query = "select * from employmentinfo;";
@@ -41,7 +41,9 @@ $result = mysqli_query($link, $query);
             <td><?php echo $row['designation']?></td>
             <td><?php echo $row['department']?></td>
             <td><?php echo $row['from']?></td>
-            <td><?php echo $row['to']?></td>
+            <td> <?php if($row['radio'] == 'Present')  echo $row['radio'];
+                else echo $row['to']
+                ?></td>
             <td><?php echo $row['duration']?></td>
             <td><?php echo $row['responsibility']?></td>
 
@@ -56,3 +58,10 @@ $result = mysqli_query($link, $query);
 </table>
 </br>
 <a href="create_e.html">Add New</a>
+
+<!--<td>
+    <?php if($row['radio'] == 'Present')  echo $row['radio'];
+    else echo $row['to']
+    ?>
+
+</td>-->

@@ -4,7 +4,7 @@ $id = $_GET['id'];
 
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
+    "allah@03",
     "ftfl");
 
 $query = "select * from employmentinfo WHERE id = $id";
