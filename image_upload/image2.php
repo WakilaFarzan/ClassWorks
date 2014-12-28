@@ -5,7 +5,7 @@ $link = mysqli_connect("localhost",
 "allah@03",
 "ftfl");
 
-$query = "select * from image;";
+$query = "select * from image WHERE id = $id;";
 
 $result = mysqli_query($link, $query);
 
@@ -16,8 +16,8 @@ $result = mysqli_query($link, $query);
 foreach($result as $row){
 ?>
 
+ <img src=upload1.php?id=1>
 
-<img src="'">
 
 <?php }
 ?>
