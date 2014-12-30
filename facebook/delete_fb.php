@@ -4,10 +4,10 @@ $id = $_GET['id'];
 
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
-    "ftflbook");
+    "allah@03",
+    "ftfl");
 
-$query = "DELETE FROM `ftflbook`.`facebook` WHERE `facebook`.`id` = $id";
+$query = "DELETE FROM `ftfl`.`facebook` WHERE `facebook`.`id` = $id";
 
 mysqli_query($link, $query);
 

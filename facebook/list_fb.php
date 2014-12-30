@@ -2,8 +2,8 @@
 
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
-    "ftflbook");
+    "allah@03",
+    "ftfl");
 
 $query = "select * from facebook;";
 
@@ -42,7 +42,7 @@ $result = mysqli_query($link, $query);
             <td><?php echo $row['birth_day']?></td>
             <td><?php echo $row['gender']?></td>
             <td><?php echo $row['hobby']?></td>
-            <td><?php echo $row['food']?></td>
+            <td><?php echo $row['food1']?>,<?php echo $row['food2']?>,<?php echo $row['food3']?>,<?php echo $row['food4']?></td>
             <td><?php echo $row['comment']?></td>
             <td><?php echo $row['created']?></td>
             <td><?php echo $row['modified']?></td>
@@ -55,6 +55,7 @@ $result = mysqli_query($link, $query);
     ?>
 
 </table>
+<a href="create.html">Add New</a>
 
 
 

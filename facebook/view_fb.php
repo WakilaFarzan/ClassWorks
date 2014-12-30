@@ -4,8 +4,8 @@ $id = $_GET['id'];
 
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
-    "ftflbook");
+    "allah@03",
+    "ftfl");
 
 $query = "select * from facebook WHERE id = $id";
 
@@ -37,7 +37,7 @@ $row = mysqli_fetch_assoc($result);
         </tr>
         <tr>
             <td>Email</td>
-            <td><?php echo $row['femail'] ?></td>
+            <td><?php echo $row['email'] ?></td>
         </tr>
         <tr>
             <td>Password</td>

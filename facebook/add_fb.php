@@ -1,25 +1,32 @@
 <?php
 $link = mysqli_connect("localhost",
     "root",
-    "lict@2",
-    "ftflbook");
+    "allah@03",
+    "ftfl");
 
-$query="INSERT INTO `ftflbook`.`facebook` (
+$foods = $_POST['food'];
+
+$query="INSERT INTO `ftfl`.`facebook` (
                                             `first_name` ,
                                             `last_name` ,
-                                            `femail` ,
+                                            `email` ,
                                             `password` ,
                                             `birth_day` ,
                                             `gender` ,
                                             `hobby` ,
-                                            `food` ,
+                                            `food1`,
+                                            `food2`,
+                                            `food3`,
+                                            `food4`,
                                             `comment` ,
                                             `created` ,
                                             `modified`
 )
 VALUES (
-    '".$_POST['first_name']."','".$_POST['last_name']."', '".$_POST['femail']."', '".$_POST['password']."', '".$_POST['b_year'].'-'.$_POST['b_month'].'-'.$_POST['b_day']."',
-    '".$_POST['gender']."', '".$_POST['hobby']."', '".$_POST['food']."', '".$_POST['comment']."', NOW(),'');";
+    '".$_POST['first_name']."','".$_POST['last_name']."', '".$_POST['email']."', '".$_POST['password']."',
+     '".$_POST['b_year'].'-'.$_POST['b_month'].'-'.$_POST['b_day']."',
+    '".$_POST['gender']."', '".$_POST['hobby']."','".$foods[0]."','".$foods[1]."','".$foods[2]."','".$foods[3]."',
+     '".$_POST['comment']."', NOW(),'');";
 
 
 

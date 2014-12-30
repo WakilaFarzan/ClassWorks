@@ -10,7 +10,7 @@
     <input type="text" name="last_name" /></br>
 
     <label>Email</label>
-    <input type="email" name="femail" /></br>
+    <input type="email" name="email" /></br>
 
     <label>Password</label>
     <input type="password" name="password" /></br>
@@ -24,12 +24,6 @@
         <option value="1997">1997</option>
         <option value="1996">1996</option>
         <option value="1995">1995</option>
-        <option value="1994">1994</option>
-        <option value="1993">1993</option>
-        <option value="1992">1992</option>
-        <option value="1991">1991</option>
-        <option value="1990">1990</option>
-        <option value="1989">1989</option>
     </select>
 
     <select name="b_month">
@@ -66,12 +60,21 @@
 <input type="radio" name="gender" value="Male" checked>Male
 <input type="radio" name="gender" value="Female">Female </br>
 
-<label>Hobby</label>
-<textarea rows="3" cols="50" name="hobby"></textarea></br>
+<label>Hobby</label></br>
+    <input type="checkbox" name="hobby" value="Gardening" checked>Gardening<br>
+    <input type="checkbox" name="hobby" value="Travelling">Travelling<br>
+    <input type="checkbox" name="hobby" value="Painting">Painting<br>
+    <input type="checkbox" name="hobby" value="Fishing">Fishing<br></br>
 
 
-<label>Food</label>
-<textarea rows="3" cols="50" name="food"></textarea></br>
+    <label>Food</label></br>
+    <select name="food[]" multiple="multiple">
+        <option value=""></option>
+        <option value="Icecream">Icecream</option>
+        <option value="Chocolate">Chocolate</option>
+        <option value="Chotpoti">Chotpoti</option>
+        <option value="Fuchka">Fuchka</option>
+    </select></br></br>
 
 <label>Comment</label>
 <textarea rows="3" cols="50" name="comment"></textarea></br>
