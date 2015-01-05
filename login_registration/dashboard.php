@@ -1,5 +1,7 @@
 
 
+<a href="logout.php">Logout</a>
+
 <?php
 
 echo "<br>";
@@ -18,3 +20,6 @@ if(isset($_SESSION['name'])){
 else{
     header("location:homepage.php");
 }
+
+
+?>

@@ -27,7 +27,7 @@ else{
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $link = mysqli_connect("localhost", "root", "allah@03", "ftfl");
+    $link = mysqli_connect("localhost", "root", "lict@2", "ftfl");
 
     $query = "INSERT INTO `ftfl`.`users`(`name`, `email`, `username`, `password`, `created`, `modified`)
                       VALUES ('$name', '$email', '$username', '$password', current_timestamp, current_timestamp)";

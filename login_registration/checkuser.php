@@ -33,7 +33,7 @@ $password = $_POST['password'];
 
 //exit;
 
-$link = mysqli_connect("localhost", "root", "allah@03", "ftfl");
+$link = mysqli_connect("localhost", "root", "lict@2", "ftfl");
 
 $query = "SELECT * FROM users WHERE `username` = '$username' AND `password` = '$password'";
 $result = mysqli_query($link, $query);

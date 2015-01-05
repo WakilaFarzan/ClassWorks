@@ -1,6 +1,6 @@
 <?php
 
-mysql_connect("localhost","root","allah@03");
+mysql_connect("localhost","root","lict@2");
 mysql_select_db("ftfl");
 
 $id=addslashes($_REQUEST['id']);
